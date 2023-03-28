@@ -30,5 +30,20 @@ jobs:
           npm install -g yarn
           yarn install
           yarn build --out-dir .vercel/output
+      - name: Create vercel metadata files
+        shell: bash
+        run: |
+          cat > .vercel/output/config.json << EOF
+          { "version": 3,
+            "routes": [
+              { "handle": "filesystem" },
+              {
+                "src": "/(.*)",
+                "status": 404,
+                "dest": "/404.html"
+              }
+            ]
+          }
+          EOF
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
