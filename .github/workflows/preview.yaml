@@ -18,9 +18,7 @@ jobs:
       - name: Download Reference Doc
         run:  |
           curl https://codeload.github.com/ClickHouse/ClickHouse/tar.gz/master | tar -xz -C ./ --strip=2 "ClickHouse-master/docs/"
-          cp -R ./en docs
-          cp -R ./ru docs/
-          cp -R ./zh docs/
+          cp ./en/sql-reference/syntax.md docs/
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
