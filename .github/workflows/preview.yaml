@@ -29,6 +29,6 @@ jobs:
           export NODE_OPTIONS="--max_old_space_size=4096"
           npm install -g yarn
           yarn install
-          yarn build
+          yarn build --out-dir .vercel/output
       - name: Deploy Project Artifacts to Vercel
         run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
