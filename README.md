@@ -1,41 +1,48 @@
-# Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+<p align="center">
+  <img src="https://github.com/ClickHouse/clickHouse-presentations/raw/master/images/logo-400x240.png" alt="ClickHouse — open source distributed column-oriented DBMS"/>
+  <br/>
+  ClickHouse® is an open-source column-oriented database management system that allows generating analytical data reports in real-time.
+</p>
 
-### Installation
+<h1 align="center">
+  <a href="https://clickhouse.com/docs/">
+    ClickHouse Documentation
+  </a>
+</h1>
 
-```
-$ yarn
-```
+<span align="center">
+  
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-### Local Development
+[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
+[cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
-```
-$ yarn start
-```
+</span>
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+ClickHouse is blazing fast, but understanding ClickHouse and using it effectively is a journey. The documentation is your source for gaining the knowledge you need to be successful with your ClickHouse projects and applications.
 
-### Build
+## Highlights
 
-```
-$ yarn build
-```
+Some of the highlights of the ClickHouse docs include:
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+- A **[Quick Start](https://clickhouse.com/docs/quick-start)** and **[Tutorial](https://clickhouse.com/docs/en/tutorial)** to get new users up and running quickly
+- A **[Connect a UI section](https://clickhouse.com/docs/en/connect-a-ui)** with guides on how to connect popular UI/BI tools to ClickHouse like Grafana, Metabase, Superset and Tableau
+- An **[Integrations section](https://clickhouse.com/docs/en/integrations)** of guides on how to connect ClickHouse to external systems like Kafka AWS S3, PostgreSQL, MySQL, Airbyte and much more
+- A **[User Guides section](https://clickhouse.com/docs/en/guides)** filled with articles, tutorials and how-to guides covering all sorts of fundamental and advanced ClickHouse topics, including how to choose a primary key, configure a replicated table, improve query performance, and lots of other helpful tips and tricks.
+- The historical docs can be found in the **[References section](https://clickhouse.com/docs/en)**, where you will find all the technical details like a complete ClickHouse SQL reference, a explanation of the various ClickHouse data types, instructions on how to build ClickHouse from the source code, the recent changelog, and much more.
 
-### Deployment
+## How to Contribute
 
-Using SSH:
+We encourage and celebrate users of ClickHouse and providers of integrated platforms to contribute new articles and user guides. To contribute, simply create a pull request to this repo.
 
-```
-$ USE_SSH=true yarn deploy
-```
+If you are looking to submit changes or additions to the technical reference content (the pages under the **References** section of the docs website), that content can be found in the [ClickHouse](https://github.com/ClickHouse/ClickHouse/tree/master/docs/en) repository.
 
-Not using SSH:
+To test your PR [build the docs locally](https://github.com/ClickHouse/clickhouse-docs/blob/main/contrib-writing-guide.md).
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
+## License
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+[![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
