@@ -38,7 +38,7 @@ jobs:
             "version": 3,
             "routes": [
               {
-                "src": "^/[^./]+\\.[0-9a-f]{8}\\.(css|js)$",
+                "src": "^/[^./]+\\\.[0-9a-f]{8}\\\.(css|js)$",
                 "headers": {
                   "cache-control": "max-age=31536000, immutable"
                 },
