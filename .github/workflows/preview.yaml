@@ -18,8 +18,11 @@ jobs:
       - name: Download Reference Doc
         run:  |
           curl https://codeload.github.com/ClickHouse/ClickHouse/tar.gz/master | tar -xz -C ./ --strip=2 "ClickHouse-master/docs/"
-          cp ./en/sql-reference/syntax.md docs/
+          cp -R ./en docs
+          cp -R ./ru docs/
       - name: Build Project Artifacts
-        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+        run:  |
+          export NODE_OPTIONS="--max_old_space_size=4096"
+          vercel build --token=${{ secrets.VERCEL_TOKEN }}
       - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} --debug
+        run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
